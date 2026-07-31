@@ -22,3 +22,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files (sensitive)
+.env
+.env.local
+.env.*
+
+# Vite / dev cache
+.vite/
+
+# Build / coverage
+build/
+coverage/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
