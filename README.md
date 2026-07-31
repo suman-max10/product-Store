@@ -36,3 +36,14 @@ Check out the deployed application here: [Insert Link to Your Deployed App Here]
 *   [Prettier](https://prettier.io/) for code formatting
 
 ## 📁 Project Structure
+
+mern-store-app/
+├── backend/ # Express.js server & API logic
+│ └── ...
+├── frontend/ # React application
+│ └── ...
+├── .eslintrc.json # ESLint configuration
+├── .gitignore
+├── .prettierrc.json # Prettier configuration
+├── package.json # Root package.json (likely for managing builds)
+└── README.md
