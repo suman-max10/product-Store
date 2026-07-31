@@ -9,21 +9,17 @@ const app = express();
 
 app.use(express.json());
 
-app.post("/api/products", async (req, res) => {
-  const products = req.body;
-  if (!products.name || !products.price || !products.image) {
-    return res
-      .status(400)
-      .json({ success: false, message: "Please provide all required fields" });
-  }
+app.get("/api/products", async (req, res) => {
   try {
-    const product = await Product.create(products);
-    res.status(201).json({ success: true, data: product });
+    const products = await Product.find({});
+    res.status(200).json({ success: true, data: products });
   } catch (error) {
-    console.error(" Error in creating product:", error.message);
+    console.error("Error in fetching products:", error.message);
     res.status(500).json({ success: false, message: "Internal Server Error" });
   }
 });
+
+
 
 app.listen(5000, () => {
   connectDB();
