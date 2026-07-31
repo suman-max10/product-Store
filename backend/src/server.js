@@ -19,6 +19,24 @@ app.get("/api/products", async (req, res) => {
   }
 });
 
+app.post("/api/products", async (req, res) => {
+  const products = req.body;
+  if (!products.name || !products.price || !products.image) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Please provide all required fields" });
+  }
+  try {
+    const product = await Product.create(products);
+    res.status(201).json({ success: true, data: product });
+  } catch (error) {
+    console.error(" Error in creating product:", error.message);
+    res.status(500).json({ success: false, message: "Internal Server Error" });
+  }
+});
+
+
+
 
 
 app.listen(5000, () => {
