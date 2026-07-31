@@ -1,20 +1,18 @@
-import { StrictMode } from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+/** @format */
 
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { BrowserRouter } from "react-router-dom";
+import { createRoot } from "react-dom/client";
 
+import App from "./App.jsx";
 
-
-import App from './App.jsx'
-
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-     <ChakraProvider >
-      <App />
+    <ChakraProvider>
+      <BroWserRouter>
+        <App />
+      </BroWserRouter>
     </ChakraProvider>
   </StrictMode>,
-)
-
-
-
-
+);
