@@ -1,5 +1,8 @@
 import { create } from "zustand";
 
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "").replace(/\/$/, "");
+const buildApiUrl = (path) => (API_BASE_URL ? `${API_BASE_URL}${path}` : path);
+
 const parseJsonSafely = async (response) => {
 	const raw = await response.text();
 	if (!raw) return null;
@@ -19,7 +22,7 @@ export const useProductStore = create((set) => ({
 			return { success: false, message: "Please fill in all fields." };
 		}
 		try {
-			const res = await fetch("/api/products", {
+			const res = await fetch(buildApiUrl("/api/products"), {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -43,7 +46,7 @@ export const useProductStore = create((set) => ({
 	},
 	fetchProducts: async () => {
 		try {
-			const res = await fetch("/api/products");
+			const res = await fetch(buildApiUrl("/api/products"));
 			const data = await parseJsonSafely(res);
 			if (!res.ok || !data?.success) {
 				set({ products: [] });
@@ -56,7 +59,7 @@ export const useProductStore = create((set) => ({
 	},
 	deleteProduct: async (pid) => {
 		try {
-			const res = await fetch(`/api/products/${pid}`, {
+			const res = await fetch(buildApiUrl(`/api/products/${pid}`), {
 				method: "DELETE",
 			});
 			const data = await parseJsonSafely(res);
@@ -76,7 +79,7 @@ export const useProductStore = create((set) => ({
 	},
 	updateProduct: async (pid, updatedProduct) => {
 		try {
-			const res = await fetch(`/api/products/${pid}`, {
+			const res = await fetch(buildApiUrl(`/api/products/${pid}`), {
 				method: "PUT",
 				headers: {
 					"Content-Type": "application/json",
