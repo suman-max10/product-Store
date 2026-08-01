@@ -47,3 +47,6 @@ mern-store-app/
 ├── .prettierrc.json # Prettier configuration
 ├── package.json # Root package.json (likely for managing builds)
 └── README.md
+
+
+# In this Project I have used CHAKRA UI
