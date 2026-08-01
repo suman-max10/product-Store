@@ -1,12 +1,13 @@
 /** @format */
 
-import React from "react";
-import { Container, Flex, HStack, Text, Button } from "@chakra-ui/react";
+import { Container, Flex, HStack, Text, Button, useColorMode } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { CiSquarePlus } from "react-icons/ci";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 
 const NavBar = () => {
+  const { colorMode, toggleColorMode } = useColorMode(); 
   return (
     <Container maxW={"1140px"} px={4}>
       <Flex
@@ -28,6 +29,9 @@ const NavBar = () => {
         <HStack spacing={2} alignItems={"center"}>
           <Button as={RouterLink} to={"/create"}>
            <CiSquarePlus />
+          </Button>
+          <Button onClick={toggleColorMode}>
+           {colorMode === "light" ? <FiMoon /> : <FiSun />}
           </Button>
         </HStack>
       </Flex>
