@@ -2,47 +2,97 @@
 
 # 🛍️ Product Store App
 
-## 📖 Description
+A full-stack MERN product management app with a clean Chakra UI interface, product CRUD operations, and REST API integration.
 
-A dynamic, responsive full-stack web application built with the MERN stack (MongoDB, Express.js, React, and Node.js). This application serves as a complete product management system, allowing users to perform full CRUD (Create, Read, Update, Delete) operations on products through an interactive user interface.
+[![Stack](https://img.shields.io/badge/Stack-MERN-10b981)](https://www.mongodb.com/mern-stack)
+[![Frontend](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-38bdf8)](https://vitejs.dev/)
+[![Backend](https://img.shields.io/badge/Backend-Express%20%2B%20Node-22c55e)](https://expressjs.com/)
+[![State](https://img.shields.io/badge/State-Zustand-f59e0b)](https://zustand-demo.pmnd.rs/)
 
-This project was developed alongside a YouTube tutorial series, providing a practical guide to building a fully functional full-stack application, from setting up the development environment to deploying the final product.
+## ✨ Highlights
 
-## ✨ Features
+- Full product CRUD: create, read, update, and delete products.
+- Responsive UI built with Chakra UI.
+- Global state management with Zustand.
+- Theme toggle (light and dark mode).
+- MongoDB persistence with Mongoose.
+- RESTful Express API.
 
-- **Full CRUD Functionality:** Create, edit, and delete products seamlessly from both the UI and the database.
-- **Interactive UI:** A clean and responsive interface built with React for a smooth user experience.
-- **State Management:** Utilizes Zustand for efficient and scalable client-side state management.
-- **Theme Toggle:** Change the website's color theme with a simple toggle button for a personalized experience.
-- **RESTful API:** A well-structured API built with Express.js and Node.js to handle all backend logic and data persistence.
-- **Database Integration:** MongoDB is used as the database to store and manage product data reliably.
-
-## 🚀 Live Demo
-
-Check out the deployed application here: [Insert Link to Your Deployed App Here]
-
-## 🛠️ Technologies Used
+## 🧰 Tech Stack
 
 ### Backend
 
 - [Node.js](https://nodejs.org/)
 - [Express.js](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/) (with [Mongoose](https://mongoosejs.com/) ODM)
+- [MongoDB](https://www.mongodb.com/) + [Mongoose](https://mongoosejs.com/)
+- [dotenv](https://www.npmjs.com/package/dotenv)
 
 ### Frontend
 
-- [React](https://reactjs.org/) (with [Vite](https://vitejs.dev/) build tool)
-- [Zustand](https://zustand-demo.pmnd.rs/) for state management
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [React Router](https://reactrouter.com/)
 
-### Other Tools
+## 🚀 Quick Start
 
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io/) for code formatting
+### 1) Install dependencies
+
+From project root:
+
+```bash
+npm install
+```
+
+From frontend folder:
+
+```bash
+cd frontend
+npm install
+```
+
+### 2) Configure environment variables
+
+Create a `.env` file in project root with:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```
+
+### 3) Run the app
+
+Terminal 1 (backend from project root):
+
+```bash
+npm run dev
+```
+
+Terminal 2 (frontend):
+
+```bash
+cd frontend
+npm run dev
+```
+
+Frontend runs on `http://localhost:5173` and proxies `/api` requests to backend `http://localhost:5000`.
+
+## 🔌 API Endpoints
+
+Base path: `/api/products`
+
+- `GET /api/products` - fetch all products
+- `POST /api/products` - create product
+- `PUT /api/products/:id` - update product
+- `DELETE /api/products/:id` - delete product
 
 ## 📁 Project Structure
 
-mern-store-app/
-├── backend/ # Express.js server & API logic
+```text
+product-Store/
+├── backend/
+│   ├── README.md
 │   └── src/
 │       ├── config/
 │       │   └── db.js
@@ -53,7 +103,7 @@ mern-store-app/
 │       ├── routes/
 │       │   └── product.route.js
 │       └── server.js
-├── frontend/ # React application
+├── frontend/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
@@ -69,12 +119,20 @@ mern-store-app/
 │   ├── index.html
 │   ├── package.json
 │   └── vite.config.js
-├── .eslintrc.json # ESLint configuration
 ├── .gitignore
-├── .prettierrc.json # Prettier configuration
-├── package.json # Root package.json (likely for managing builds)
+├── package.json
 └── README.md
+```
 
-# In this Project I have used CHAKRA UI
+## 🎨 UI Notes
 
--------> VERSION v2.0.0
+- Built with Chakra UI components.
+- Includes a light/dark theme switch in the navbar.
+
+## 📌 Live Demo
+
+Add your deployed link here: `https://your-live-url`
+
+## 🏷️ Version
+
+`v2.0.0`
