@@ -54,7 +54,21 @@ mern-store-app/
 │       │   └── product.route.js
 │       └── server.js
 ├── frontend/ # React application
-│ └── ...
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx
+│   │   │   └── ProductCard.jsx
+│   │   ├── pages/
+│   │   │   ├── CreatePage.jsx
+│   │   │   └── HomePage.jsx
+│   │   ├── store/
+│   │   │   └── product.js
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
 ├── .eslintrc.json # ESLint configuration
 ├── .gitignore
 ├── .prettierrc.json # Prettier configuration
