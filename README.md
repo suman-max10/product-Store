@@ -1,5 +1,6 @@
-# 🛍️ Product Store App
+<!-- @format -->
 
+# 🛍️ Product Store App
 
 ## 📖 Description
 
@@ -9,12 +10,12 @@ This project was developed alongside a YouTube tutorial series, providing a prac
 
 ## ✨ Features
 
-*   **Full CRUD Functionality:** Create, edit, and delete products seamlessly from both the UI and the database.
-*   **Interactive UI:** A clean and responsive interface built with React for a smooth user experience.
-*   **State Management:** Utilizes Zustand for efficient and scalable client-side state management.
-*   **Theme Toggle:** Change the website's color theme with a simple toggle button for a personalized experience.
-*   **RESTful API:** A well-structured API built with Express.js and Node.js to handle all backend logic and data persistence.
-*   **Database Integration:** MongoDB is used as the database to store and manage product data reliably.
+- **Full CRUD Functionality:** Create, edit, and delete products seamlessly from both the UI and the database.
+- **Interactive UI:** A clean and responsive interface built with React for a smooth user experience.
+- **State Management:** Utilizes Zustand for efficient and scalable client-side state management.
+- **Theme Toggle:** Change the website's color theme with a simple toggle button for a personalized experience.
+- **RESTful API:** A well-structured API built with Express.js and Node.js to handle all backend logic and data persistence.
+- **Database Integration:** MongoDB is used as the database to store and manage product data reliably.
 
 ## 🚀 Live Demo
 
@@ -23,17 +24,20 @@ Check out the deployed application here: [Insert Link to Your Deployed App Here]
 ## 🛠️ Technologies Used
 
 ### Backend
-*   [Node.js](https://nodejs.org/)
-*   [Express.js](https://expressjs.com/)
-*   [MongoDB](https://www.mongodb.com/) (with [Mongoose](https://mongoosejs.com/) ODM)
+
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/) (with [Mongoose](https://mongoosejs.com/) ODM)
 
 ### Frontend
-*   [React](https://reactjs.org/) (with [Vite](https://vitejs.dev/) build tool)
-*   [Zustand](https://zustand-demo.pmnd.rs/) for state management
+
+- [React](https://reactjs.org/) (with [Vite](https://vitejs.dev/) build tool)
+- [Zustand](https://zustand-demo.pmnd.rs/) for state management
 
 ### Other Tools
-*   [ESLint](https://eslint.org/) for code linting
-*   [Prettier](https://prettier.io/) for code formatting
+
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io/) for code formatting
 
 ## 📁 Project Structure
 
@@ -48,5 +52,6 @@ mern-store-app/
 ├── package.json # Root package.json (likely for managing builds)
 └── README.md
 
-
 # In this Project I have used CHAKRA UI
+
+-------> VERSION v2.0.0
