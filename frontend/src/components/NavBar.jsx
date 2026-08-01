@@ -44,4 +44,4 @@ const Navbar = () => {
 		</Container>
 	);
 };
-export default Navbar;
+export default Navbar
