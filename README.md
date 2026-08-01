@@ -43,7 +43,16 @@ Check out the deployed application here: [Insert Link to Your Deployed App Here]
 
 mern-store-app/
 ├── backend/ # Express.js server & API logic
-│ └── ...
+│   └── src/
+│       ├── config/
+│       │   └── db.js
+│       ├── controllers/
+│       │   └── product.controller.js
+│       ├── models/
+│       │   └── product.model.js
+│       ├── routes/
+│       │   └── product.route.js
+│       └── server.js
 ├── frontend/ # React application
 │ └── ...
 ├── .eslintrc.json # ESLint configuration
