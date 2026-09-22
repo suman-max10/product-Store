@@ -2,6 +2,11 @@
 
 # 🛍️ Product Store App
 
+
+# Live Link
+
+https://product-store-three-xi.vercel.app/
+
 A full-stack MERN product management app with a clean Chakra UI interface, product CRUD operations, and REST API integration.
 
 [![Stack](https://img.shields.io/badge/Stack-MERN-10b981)](https://www.mongodb.com/mern-stack)
